@@ -9,10 +9,10 @@
  * @author wahyu mau
  */
 public class BankDatabase {
-    private Account[] accounts; // array of Accounts
+    private Account[] accounts;
    
    public BankDatabase() {
-      accounts = new Account[2]; // just 2 accounts for testing
+      accounts = new Account[2];
       accounts[0] = new Account(1234, 4321, new Balance(500,300));
       accounts[1] = new Account(8765, 5678, new Balance(300,100));        
    }
