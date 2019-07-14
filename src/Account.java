@@ -44,12 +44,12 @@ public class Account {
         this.balance = balance;
     }
     
-    public void debit(int amount){        
+    public void debit(double amount){        
         this.balance.setAvailableBalance(this.balance.getAvailableBalance()-amount);
         this.balance.setTotalBalance(this.balance.getTotalBalance()-amount);
     }
     
-    public void credit(int amount){
+    public void credit(double amount){
         this.balance.setTotalBalance(this.balance.getTotalBalance()+amount);
     }
     

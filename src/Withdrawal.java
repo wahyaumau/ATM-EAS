@@ -61,9 +61,9 @@ public class Withdrawal implements Transaction{
         do{ 
             int amount = promptForAmount();         
             if(amount != CANCELED){
-                if(amount <= account.getBalance().getAvailableBalance()){             
+                if(account.getBalance().getAvailableBalance() >= amount ){             
                     if(cashDispenser.isSufficientCashAvailable(amount)){  
-                        account.debit(amount);
+                        account.debit((double) amount);
                         cashDispenser.dispenseCash(amount);
                         cashDispensed = true;
                         System.out.println("\nYour cash has been dispensed. Please take your cash now.");  

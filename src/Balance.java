@@ -9,34 +9,41 @@
  * @author wahyu mau
  */
 public class Balance {
-    private int totalBalance;
-    private int availableBalance;
+    private double totalBalance;
+    private double availableBalance;
 
-    public Balance(int totalBalance, int availableBalance) {
+    public Balance(double totalBalance, double availableBalance) {
         this.totalBalance = totalBalance;
         this.availableBalance = availableBalance;
     }
         
 
-    public int getTotalBalance() {
+    public double getTotalBalance() {
         return totalBalance;
     }
 
-    public void setTotalBalance(int totalBalance) {
+    public void setTotalBalance(double totalBalance) {
         this.totalBalance = totalBalance;
     }
 
-    public int getAvailableBalance() {
+    public double getAvailableBalance() {
         return availableBalance;
     }
 
-    public void setAvailableBalance(int availableBalance) {
+    public void setAvailableBalance(double availableBalance) {
         this.availableBalance = availableBalance;
     }
     
     public void displayBalance(){
-        System.out.println(this.totalBalance);
-        System.out.println(this.availableBalance);
+        System.out.printf("- Available balance: ");
+        displayDollarAmount(this.availableBalance);
+        
+        System.out.printf("- Total balance: ");
+        displayDollarAmount(this.totalBalance);
+    }
+    
+    public void displayDollarAmount(double amount) {
+      System.out.printf("$%,.2f\n", amount);   
     }
     
     

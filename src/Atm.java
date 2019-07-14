@@ -47,7 +47,7 @@ public class Atm {
         System.out.print("\nPlease enter your account number : ");
         Scanner scanner = new Scanner(System.in);
         int accountNumber = scanner.nextInt();
-        System.out.println("\nEnter your PIN : ");
+        System.out.printf("\nEnter your PIN : ");
         int pin = scanner.nextInt();
         Account account = bankDatabase.getAccount(accountNumber);
         if (account != null) {

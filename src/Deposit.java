@@ -19,20 +19,20 @@ public class Deposit implements Transaction{
         this.account = account;
     }
     
-    private int promptForAmount(){       
+    private double promptForAmount(){       
         System.out.println("\nPlease enter a deposit amount in CENTS (or 0 to cancel)");  
         Scanner scanner = new Scanner(System.in);
         int input = scanner.nextInt();     
         if(input == CANCELED) return CANCELED;  
      else{  
-       return input / 100;
+       return (double) input / 100;
      }
    }
         
     @Override
     public void onTransaction() {
-        int amount = promptForAmount();
-        if(amount != CANCELED){         
+        double amount = promptForAmount();
+        if(amount != CANCELED && amount > 0){         
             System.out.println("\nPlease insert a deposit envelope containing ");  
             System.out.println(amount);                
             account.credit(amount);

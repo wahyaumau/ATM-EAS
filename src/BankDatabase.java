@@ -13,8 +13,8 @@ public class BankDatabase {
    
    public BankDatabase() {
       accounts = new Account[2];
-      accounts[0] = new Account(1234, 4321, new Balance(500,300));
-      accounts[1] = new Account(8765, 5678, new Balance(300,100));        
+      accounts[0] = new Account(1234, 4321, new Balance(500.0,300.0));
+      accounts[1] = new Account(8765, 5678, new Balance(300.0,100.0));        
    }
    
    public Account getAccount(int accountNumber) {
